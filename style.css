@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.stopwatch-card {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b8c7dc;
+    margin-bottom: 35px;
+}
+
+.timer {
+    font-size: clamp(42px, 12vw, 65px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-variant-numeric: tabular-nums;
+}
+
+.milliseconds {
+    font-size: 25px;
+    color: #00e5ff;
+    margin-bottom: 30px;
+    font-variant-numeric: tabular-nums;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+}
+
+.start {
+    background: #00a86b;
+}
+
+.pause {
+    background: #e69b18;
+}
+
+.reset {
+    background: #e74c3c;
+}
+
+.lap {
+    background: #2878d0;
+}
+
+.lap-section {
+    text-align: left;
+}
+
+.lap-section h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#lapList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    margin-bottom: 9px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+#lapList .empty {
+    justify-content: center;
+    color: #b8c7dc;
+}
+
+@media (max-width: 400px) {
+    .stopwatch-card {
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
